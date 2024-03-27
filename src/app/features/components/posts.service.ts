@@ -14,4 +14,13 @@ export class PostsService {
   create(data: Posts) {
     return this.httpClient.post('http://localhost:3000/posts', data);
   }
+  edit(id: number) {
+    return this.httpClient.get<Posts>(`http://localhost:3000/posts/${id}`);
+  }
+  update(data: Posts) {
+    return this.httpClient.put<Posts>(
+      `http://localhost:3000/posts/${data.id}`,
+      data
+    );
+  }
 }

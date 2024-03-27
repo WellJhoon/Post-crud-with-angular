@@ -1,1 +1,29 @@
-<p>edit works!</p>
+<div class="container">
+    <legend>Edit Post</legend>
+    <br>
+    <form (ngSubmit)="update()">
+        <div class="mb-3">
+            <label for="txtId" class="form-label">Id</label>
+            <input type="text" name="id" [(ngModel)]="formatData.id" class="form-control" id="txtId" disabled>
+        </div>
+        <div class="mb-3">
+            <label for="txtTitle" class="form-label">Title</label>
+            <input type="text" name="title" [(ngModel)]="formatData.title" class="form-control" id="txtTitle">
+        </div>
+        <div class="mb-3">
+            <label for="txtAuthor" class="form-label">Author</label>
+            <input type="text" name="author" [(ngModel)]="formatData.author" class="form-control" id="txtAuthor">
+        </div>
+        <div class="mb-3">
+            <label for="txtContent" class="form-label">Content</label>
+            <input type="text" name="content" [(ngModel)]="formatData.content" class="form-control" id="txtContent">
+        </div>
+        <div class="mb-3">
+            <label for="date" class="form-label">Date</label>
+            <input type="date" name="date" [(ngModel)]="formatData.date" class="form-control" id="date">
+        </div>
+        <button type="submit" class="btn btn-primary"> 
+            Update
+        </button>
+    </form>
+</div>
