@@ -8,7 +8,9 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { FeatureModule } from './features/feature.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { ToastrModule } from 'ngx-toastr';
 @NgModule({
   declarations: [AppComponent, NavbarComponent],
   imports: [
@@ -19,6 +21,8 @@ import { FeatureModule } from './features/feature.module';
     FormsModule,
     HttpClientModule,
     FeatureModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent],
