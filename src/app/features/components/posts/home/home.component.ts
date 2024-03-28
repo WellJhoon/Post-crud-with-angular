@@ -16,4 +16,12 @@ export class HomeComponent implements OnInit {
       this.allPost = data;
     });
   }
+
+  deleteItem(id: number) {
+    this.postsService.delete(id).subscribe({
+      next: (data) => {
+        this.allPost = this.allPost.filter((_) => _.id != id);
+      },
+    });
+  }
 }

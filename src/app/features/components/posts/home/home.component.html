@@ -18,7 +18,9 @@
                 <td>{{item.author}}</td>
                 <td>{{item.content}}</td>
                 <td>{{item.date}}</td>
-                <td> <a href="" class="btn btn-primary" [routerLink]="['/posts/edits', item.id]"></a></td>
+                <td><a href="" class="btn btn-primary" [routerLink]="['/posts/edit', item.id]">Edit</a>
+                <button type="button" class="btn btn-danger ms-2" (click)="deleteItem(item.id)">Delete</button>
+                </td>
             </tr>
         </tbody>
     </table>

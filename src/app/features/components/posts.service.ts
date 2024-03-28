@@ -23,4 +23,7 @@ export class PostsService {
       data
     );
   }
+  delete(id: number) {
+    return this.httpClient.delete<Posts>(`http://localhost:3000/posts/${id}`);
+  }
 }
